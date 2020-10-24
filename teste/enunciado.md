@@ -5,7 +5,9 @@ Abaixo você pode verificar as perguntas do teste técnico.
 Para **CADA** uma das questões no enunciado crie um pasta com o nome da seguinte maneira:
 
 > Questão X: ...
+
 > crie a pasta questaoX
+
 > coloque sua solução dentro dela
 
 **Só serão aceitas soluções em JavaScript.**
@@ -16,6 +18,7 @@ Não use pacotes prontos que façam o trabalho por você, crie suas próprias so
 Questão 1: Escreva as expressões regulares necessárias para validar as seguintes expressões:
 
 a - Email (com até dois elementos após o @, sem contar o *.com*, ex.: nome@elem1.elem2.com)
+
 b - Número de celular (qualquer formato, contato que seja um número de celular brasileiro)
 
 Questão 2: Dada uma árvore binária, retorne todos os caminhos possíveis entre a raíz e as folhas.
@@ -23,7 +26,7 @@ Questão 2: Dada uma árvore binária, retorne todos os caminhos possíveis entr
     OBS.: você pode usar um pacote com árvores binárias prontas para testar, mas não em sua solução.
 
 	Ex.: Árvore = [1,2,3,null,5]
-		    1
+        1
 	      /   \
 	     2     3
 	      \
