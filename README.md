@@ -6,6 +6,6 @@ O prazo para realização é até dia 31/outubro/2020. Para enviar sua solução
 
 ## Identificação:
 
-**Nome:**
+**Nome:** Mayra Zanchett Manchein
 
-**Email (de preferência aquele que usou para se inscrever no processo):**
+**Email (de preferência aquele que usou para se inscrever no processo):** mayramanchein17@gmail.com
