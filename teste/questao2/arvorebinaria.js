@@ -12,84 +12,56 @@
        Output = [[1,2,5], [1,3]]
 */
 
-class No {
-  constructor(valor, esquerda, direita) {
-    this.valor = valor;
-    this.esquerda = esquerda;
-    this.direita = direita;
-  }
-}
-
 class ArvoreBinaria {
   constructor() {
-    this.raiz = new No(null, null, null);
     this.raiz = null;
+    this.esq = [];
+    this.dir = [];
   }
 
-  setEsquerda(valor) {
-   // const arvore = [];
-    this.esquerda = valor;
-   // arvore.push(this.esquerda);
-    //if (valor) {
-      //valor.esquerda = this;
-   // }
+  arrayEsquerdo(valor) {
+    this.esq.push(valor);
   }
 
-  setDireita(valor) {
-    this.direita = valor;
+  arrayDireito(valor) {
+    this.dir.push(valor);
   }
 
-  getEsquerda() {
-    return this.arvore;
-  }
-
-  getDireita() {
-    return this.direita;
+  arrayArvore() {
+    const arvore = [];
+    arvore.push(this.esq);
+    arvore.push(this.dir);
+    console.log(arvore);
   }
 
   inserir(value) {
-    let novo = new No(value, null, null);
     if (this.raiz == null) {
-      this.raiz = novo;
+      this.raiz = value;
+      this.arrayEsquerdo(this.raiz);
+      this.arrayDireito(this.raiz);
     } else {
-      let atual = this.raiz;
       while (true) {
-        let anterior = atual;
-        if (value <= atual.valor) {
-          atual = atual.esquerda;
-          this.setEsquerda(atual);
-          if (atual == null) {
-            anterior.esquerda = novo;
-            this.setEsquerda(anterior.esquerda);
-            return;
-          }
+        if (value <= this.raiz) {
+          this.arrayEsquerdo(value);
+          return;
         } else {
-          atual = atual.direita;
-          this.setDireita(atual);
-          if (atual == null) {
-            anterior.direita = novo;
-            this.setDireita(anterior.direita);
-            return;
-          }
+          this.arrayDireito(value);
+          return;
         }
       }
     }
   }
 
   exibirArvore() {
-    let valor = this.raiz;
-    if (valor != null) {
-      console.log(valor.esquerda);
-      console.log(valor.valor);
-      console.log(valor.direita);
-    }
+    console.log(this.esq);
+    console.log(this.dir);
   }
 }
 
 a = new ArvoreBinaria();
-a.inserir(8);
-a.inserir(6);
-a.inserir(9);
-a.inserir(5);
-a.inserir(4);
-a.exibirArvore();
+a.arrayEsquerdo(1);
+a.arrayEsquerdo(2);
+a.arrayEsquerdo(5);
+a.arrayDireito(1);
+a.arrayDireito(3);
+a.arrayArvore();
